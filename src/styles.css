@@ -77,5 +77,11 @@ input[type="file"] {
   padding: .8rem;
   cursor: pointer;
   border: 2px solid transparent;
+}
 
+.validation-error p {
+  color: red;
+  margin-top: 0.4rem;
+  border-left: 2px solid #dc3545;
+  padding-left: 0.5rem;
 }
