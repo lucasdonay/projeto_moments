@@ -28,3 +28,54 @@ a {
   transition: .4s;
   font-size: 1.6rem;
 }
+
+/* FORM */
+
+form {
+  width: 45rem;
+  margin: 0 auto;
+ }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: .4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: .6rem;
+  color: #777;
+  font-size: 1.7rem;
+}
+
+input[type="submit"] {
+  background-color: #EFEFEF;
+  font-size: 1.7rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  transform: 0.4s;
+}
+input[type="submit"]:hover {
+color: #dec129;
+background-color: #444;;
+}
+
+input[type="file"] {
+  cursor: pointer;
+  color: #dec129;
+  background-color: #EFEFEF;
+  font-size: 1.7rem;
+  padding: .8rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+}
