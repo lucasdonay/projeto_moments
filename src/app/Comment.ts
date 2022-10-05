@@ -1,8 +1,8 @@
 export interface Comment {
-  idade?: number,
-  text: string,
-  username: string,
-  momentId: number,
-  created_at?: string,
-  updated_At?: string,
+  id?: number;
+  text: string;
+  username: string;
+  momentId: number;
+  created_at?: string;
+  updated_at?: string;
 }

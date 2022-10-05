@@ -1,2 +1,2 @@
-<h2>Compartilhe o seu <span>Momento</span>!</h2>
-<app-moment-form [btnText]="btnText" onsubmit="createHandler($event)">{{ btnText }}</app-moment-form>
+<h2>Compartilhe o seu <span>momento</span>!</h2>
+<app-moment-form (onSubmit)="createHandler($event)" [btnText]="btnText"></app-moment-form>
