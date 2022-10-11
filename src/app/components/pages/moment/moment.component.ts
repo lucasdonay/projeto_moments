@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MomentService } from 'src/app/services/moment.service';
 import { Moment } from 'src/app/Moments';
 import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-moment',
@@ -10,12 +11,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MomentComponent implements OnInit {
 
+  baseApiUrl = environment.baseApiUrl;
+
   moment?: Moment;
 
-  constructor(private momentService: MomentService, route: ActivatedRoute) { }
+  constructor(private momentService: MomentService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'))
 
+    this.momentService.getMoment(id).subscribe(item => this.moment = item.data)
   }
 
 }

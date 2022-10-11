@@ -1,1 +1,12 @@
-<p>moment works!</p>
+<div class="moments" *ngIf="moment">
+  <p>{{ moment.description}}</p>
+  <h1> {{moment.title}}</h1>
+  <img src="{{ baseApiUrl }}uploads/{{ moment.image }}" alt="moment.title">
+  <div class="abou-moment">
+    <h3>Sobre o Assunto</h3>
+    <p>{{moment.description}}</p>
+  </div>
+  <div class="actions">
+    <h3>Acoes:</h3>
+  </div>
+</div>
