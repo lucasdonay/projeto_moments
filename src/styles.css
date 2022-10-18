@@ -85,3 +85,47 @@ input[type="file"] {
   border-left: 2px solid #dc3545;
   padding-left: 0.5rem;
 }
+
+/* BUTTONS */
+
+.edit-btn,
+.remove-btn {
+  margin: 1.5rem;
+  font-size: 1.8rem;
+  border: 1px solid #EFEFEF;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0.8rem;
+  background-color: #FFF;
+  transition: 0.4s;
+}
+
+button fa-icon,
+a fa-icon{
+  font-size: 2rem;
+  margin-right: 0.2em;
+}
+
+.edit-btn,
+.edit-btn path {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.remove-btn,
+.remove-btn path {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path {
+  color: #fff;
+  background-color: #dc3545;
+}

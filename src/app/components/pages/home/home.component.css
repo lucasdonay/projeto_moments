@@ -84,7 +84,11 @@
   width: 100%;
   text-align: center;
 }
-
 h2 {
   margin: 2rem 0;
+}
+
+.noMoments {
+  font-size: 2rem;
+  color: red;
 }
