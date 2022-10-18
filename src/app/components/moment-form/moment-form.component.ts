@@ -12,10 +12,11 @@ export class MomentFormComponent implements OnInit {
 
   momentForm!: FormGroup;
 
-
   @Output() onSubmit = new EventEmitter<Moment>()
 
   @Input() btnText!: string
+
+  @Input() momentData: Moment | null = null;
 
   submit() {
     if(this.momentForm.invalid) {

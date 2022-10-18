@@ -1,0 +1,11 @@
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+h2 span{
+  font-size: 3rem;
+  color: #dec129;
+}
