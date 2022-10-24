@@ -15,10 +15,37 @@
       <fa-icon [icon]="faTimes"></fa-icon> Excluir
     </button>
   </div>
-
   <div class="comments">
-    <h3>Comentarios (0): </h3>
-    <p></p>
-  </div>
+    <h3>Comentarios ({{moment.comments!.length > 0 ? moment.comments!.length : 0 }}): </h3>
 
+    <div *ngIf="moment.comments!.length > 0; else noComments">
+      <div class="comment-container" *ngFor="let comment of moment.comments">
+        <p class="comment">{{comment.text}}</p>
+        <p class="author"><span>por:</span> {{comment.username}}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noComments>
+    <p>Nao ha comentarios neste momento</p>
+  </ng-template>
+  <div class="comment-form">
+    <h3>Deixe um comentario:</h3>
+    <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
+      <div class="form-group">
+        <label for="text">Comentario</label>
+        <textarea formControlName="text" placeholder="Digite aqui seu comentario" required></textarea>
+        <div *ngIf="text.invalid && formDir.submitted" class="validation-error">
+          <p *ngIf="text.errors?.['required']">O texto e obrigatório</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Nome:</label>
+        <input formControlName="username" type="text" placeholder="Digite o seu nome" required>
+        <div *ngIf="username.invalid && formDir.submitted" class="validation-error">
+          <p *ngIf="username.errors?.['required']">O Nome e obrigatório</p>
+        </div>
+      </div>
+      <input type="submit" value="Comentar!">
+    </form>
+  </div>
 </div>

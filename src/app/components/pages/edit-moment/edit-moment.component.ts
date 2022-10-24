@@ -44,7 +44,7 @@ export class EditMomentComponent implements OnInit {
 
     await this.momentService.updateMoment(id!, formData).subscribe()
 
-    this.messagesService.add(`tdasdsadsa`)
+    this.messagesService.add(`O momento ${this.moment.id} foi editado`)
 
     this.router.navigate(['/'])
   }

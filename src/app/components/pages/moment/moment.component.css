@@ -3,8 +3,14 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
+  max-width: 600px;
+}
+
+p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -15,22 +21,27 @@ h1 {
 }
 
 img {
-  max-width: 500px;
+  max-width: 300px;
+  max-height: 300px;
   margin: 0 auto 1rem;
 }
 
 .about-moment,
 .actions {
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
   padding: 2.2rem;
-  width: 350px;
+  width: 900px;
   margin: 0 auto;
 }
 
+.about-moment {
+  background-color:  rgba(204, 204, 204, 0.091);
+  max-width: 600px;
+  width:600px;
+}
+
 .actions {
-  background-color: #eee;
-  width: 350px;
+  width: 500px;
 }
 
 .comments {
@@ -45,30 +56,45 @@ img {
 }
 
 .comment-container {
-  text-align: left;
+  text-align: center;
+  background-color: rgba(204, 204, 204, 0.091);
   border-bottom: 1px solid #efefef;
   padding: 1rem 0;
+  margin: 0 auto;
+  border: none;
 }
 
 .comment {
-  font-size: 0.9rem;
+  font-size: 2.9rem;
 }
 
 .author {
-  font-size: 0.8rem;
+ font-size: 2.3rem;
+ font-weight: bold;
+ color: black;
 }
+
 
 .comment-form {
   margin-bottom: 3rem;
+  margin: 3rem auto;
 }
 
 .comment-form form {
-  margin-top: 1rem;
-  text-align: left;
-  max-width: 300px;
-  margin-left: 0;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .author span {
   font-weight: bold;
+  color: #4b4b4b;
+  margin-right: 5px;
+}
+
+form textarea{
+  height: 120px;
+}
+
+.validation-error p {
+  text-align: left;
 }

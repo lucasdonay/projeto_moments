@@ -27,8 +27,8 @@
       cursor: pointer;
   }
 
-  .message-header p{
-      font-size: 1.2rem;
+  .message p{
+      font-size: 2.2rem;
   }
 
  .message button {
